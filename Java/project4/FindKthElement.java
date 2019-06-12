@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Pedro Vicente G처mez S찼nchez.
+ * Copyright (C) 2014 Pedro Vicente Gómez Sánchez.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
  * Implement an algorithm to find the kth to last element of a singly linked
  * list. Can you do it using recursion?
  *
- * @author Pedro Vicente G처mez S찼nchez.
+ * @author Pedro Vicente Gómez Sánchez.
  */
 public class FindKthElement {
 

@@ -22,7 +22,7 @@
  *
  * Input: [1,2,3,-1,-2,-3] Output: [-2,-1,-3,2,3,1]
  *
- * @author Pedro Vicente G처mez S찼nchez.
+ * @author Pedro Vicente Gómez Sánchez.
  */
 public class SplitArray {
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Pedro Vicente G처mez S찼nchez.
+ * Copyright (C) 2014 Pedro Vicente Gómez Sánchez.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@
  * additional links. This structure allows for efficient insertion or removal of
  * elements from any position in the sequence.
  *
- * @author Pedro Vicente G처mez S찼nchez.
+ * @author Pedro Vicente Gómez Sánchez.
  */
 public class ListNode<T> {
 

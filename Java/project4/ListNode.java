@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Pedro Vicente Gómez Sánchez.
+ * Copyright (C) 2014 Pedro Vicente G처mez S찼nchez.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +14,14 @@
  * limitations under the License.
  */
 /**
- * Main class for linked list data structure. A linked list is a data structure consisting of a
- * group of nodes which together represent a sequence. Under the simplest form, each node is
- * composed of a data and a reference (in other words, a link) to the next node in the sequence;
- * more complex variants add additional links. This structure allows for efficient insertion or
- * removal of elements from any position in the sequence.
+ * Main class for linked list data structure. A linked list is a data structure
+ * consisting of a group of nodes which together represent a sequence. Under the
+ * simplest form, each node is composed of a data and a reference (in other
+ * words, a link) to the next node in the sequence; more complex variants add
+ * additional links. This structure allows for efficient insertion or removal of
+ * elements from any position in the sequence.
  *
- * @author Pedro Vicente Gómez Sánchez.
+ * @author Pedro Vicente G처mez S찼nchez.
  */
 public class ListNode<T> {
 
@@ -47,22 +48,32 @@ public class ListNode<T> {
     this.next = next;
   }
 
-  @Override public boolean equals(Object o) {
-    if (this == o) return true;
-    if (!(o instanceof ListNode)) return false;
+  @Override
+  public boolean equals(Object listNodeObj) {
+    if (this == listNodeObj) {
+      return true;
+    }
 
-    ListNode listNode = (ListNode) o;
+    if (!(listNodeObj instanceof ListNode)) {
+      return false;
+    }
 
-    if (!data.equals(listNode.data)) return false;
+    ListNode listNode = (ListNode) listNodeObj;
+
+    if (!data.equals(listNode.data)) {
+      return false;
+    }
 
     return true;
   }
 
-  @Override public int hashCode() {
+  @Override
+  public int hashCode() {
     return data.hashCode();
   }
 
-  @Override public String toString() {
+  @Override
+  public String toString() {
     return "ListNode{" + "data=" + data + ", next=" + next + '}';
   }
 }

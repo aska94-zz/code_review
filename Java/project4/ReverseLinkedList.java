@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Pedro Vicente Gómez Sánchez.
+ * Copyright (C) 2014 Pedro Vicente G처mez S찼nchez.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,48 +13,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 /**
- * Given a singly linked list, can you write a method to return the reversed list?
+ * Given a singly linked list, can you write a method to return the reversed
+ * list?
  *
- * @author Pedro Vicente Gómez Sánchez.
+ * @author Pedro Vicente G처mez S찼nchez.
  */
 public class ReverseLinkedList {
 
   /**
-   * Iterative solution for this problem. The complexity order of this algorithm in time terms is
-   * O(N) where N is the number of elements in the list. The complexity order in this algorithm in
-   * space terms is O(1) because we only use two additional pointers and we don't allocate memory.
+   * Iterative solution for this problem. The complexity order of this algorithm
+   * in time terms is O(N) where N is the number of elements in the list. The
+   * complexity order in this algorithm in space terms is O(1) because we only use
+   * two additional pointers and we don't allocate memory.
    */
   public ListNode reverseIterative(ListNode list) {
-    if (list.getNext() == null) return list;
-
-    ListNode head = null;
-    ListNode current = list;
-    while (current != null)
-    {
-      ListNode save = current;
-      current = current.getNext();
-      save.setNext(head);
-      head = save;
+    if (list.getNext() == null) {
+      return list;
     }
-    return head;
+
+    ListNode headNode = null;
+    ListNode currentNode = list;
+    while (currentNode != null) {
+      ListNode saveNode = currentNode;
+      currentNode = currentNode.getNext();
+      saveNode.setNext(headNode);
+      headNode = saveNode;
+    }
+    return headNode;
   }
 
   /**
-   * Recursive solution to this problem. The complexity order of this algorithm in time terms is
-   * O(N) where N is the number of elements in the list. The complexity order in this algorithm in
-   * space terms is O(1) because we only use two additional pointers and we don't allocate memory.
+   * Recursive solution to this problem. The complexity order of this algorithm in
+   * time terms is O(N) where N is the number of elements in the list. The
+   * complexity order in this algorithm in space terms is O(1) because we only use
+   * two additional pointers and we don't allocate memory.
    */
   public ListNode<Integer> reverseRecursive(ListNode list) {
     return reverseRecursiveInner(list);
   }
 
   private ListNode<Integer> reverseRecursiveInner(ListNode head) {
-    if (head == null || head.getNext() == null)
-    {
+    if (head == null || head.getNext() == null) {
       return head;
-    } else
-    {
+    } else {
       ListNode reversedList = reverseRecursiveInner(head.getNext());
       head.getNext().setNext(head);
       head.setNext(null);
